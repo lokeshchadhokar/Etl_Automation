@@ -1,3 +1,4 @@
+from numpy import log
 import pytest
 import pandas as pd
 
@@ -35,7 +36,7 @@ def test_empty_file():
 
 # 6. Validate Primary Key uniqueness
 def test_primary_key_unique(load_data):
-    assert load_data['no'].is_unique, "Primary key 'no' is not unique"
+    assert load_data['eno'].is_unique, "Primary key 'no' is not unique"
 
 # 7. Check for leading/trailing spaces in 'ename'
 def test_strip_spaces(load_data):
